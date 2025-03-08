@@ -42,9 +42,9 @@ button {
   color: #333;
 }
 
-.green1 { fill: rgb(162, 255, 0); }
-.green2 { fill: rgb(133, 210, 0); }
-.green3 { fill: rgb(102, 161, 0); }
-.green4 { fill: rgb(23, 36, 0); }
-.green5 { fill: rgb(102, 161, 0); }
-.green6 { fill: rgb(133, 210, 0); }
+.green0 { fill: rgb(162, 255, 0); }
+.green1 { fill: rgb(133, 210, 0); }
+.green2 { fill: rgb(102, 161, 0); }
+.green3 { fill: #c9ff6b; }
+.green4 { fill: rgb(73, 115, 0); }
+.green5 { fill: rgb(73, 116, 0); }
