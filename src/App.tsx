@@ -4,20 +4,34 @@ import './App.css'
 function App() {
   const [inputValue, setInputValue] = useState('')
   const [ingredients, setIngredients] = useState<string[]>([])
-  const colours = ["green1", "green2", "green3", 'green4', 'green5', 'green6', 'green7']
+  const colours = ["green1", "green2", "green3", "green4", "green5", "green6", "green7"]
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault()
     if (inputValue.trim()) {  // checks if empty
       setIngredients([...ingredients, inputValue]) // appends inputValue
+      shuffleArray(colours)
       setInputValue('') // clears inputValue
     }
+  }
+
+  const shuffleArray = (array: string[]) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[array[i], array[j]] = [array[j], array[i]]
+    }
+  }
+  const saveAllIngredients = () => {
+      const guysThisIsIngredients = ingredients
+
   }
 
   const makeSegments = () => {
     const totalNoIngredients = ingredients.length
     if (totalNoIngredients === 0) return null // Return null if there are no ingredients to avoid division by zero
     const angle = 360 / totalNoIngredients
+
+    // Shuffle the colours array to ensure no two adjacent segments have the same color
 
     return ingredients.map((ingredient, index) => { // map goes through each ingredient in the array
       const colour = colours[index % colours.length] // cycles through colours
@@ -82,8 +96,8 @@ function App() {
       {ingredients.length > 0 && (
         <label className="submitted-label">Ingredients: {ingredients.join(', ')}</label>
       )}
-      
-    </div>
+        <button type="submit" onClick={saveAllIngredients} >Add</button>
+        </div>
   )
 }
 
