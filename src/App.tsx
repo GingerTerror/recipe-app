@@ -28,8 +28,8 @@ function App() {
           {/* The transform attribute applies a rotation transformation to the group */}
 
           <path
+            className={colour}
             d={`M0,0 L100,0 A100,100 0 ${angle > 180 ? 1 : 0},1 ${100 * Math.cos((angle * Math.PI) / 180)},${100 * Math.sin((angle * Math.PI) / 180)} Z`}
-            fill={colour}
           />
           {/* The <path> element defines the shape of the segment */}
           {/* The d attribute contains a series of commands to draw the path */}
@@ -40,7 +40,7 @@ function App() {
           {/* 0 ${angle > 180 ? 1 : 0},1: Large-arc-flag and sweep-flag to determine how the arc is drawn */}
           {/* ${100 * Math.cos((angle * Math.PI) / 180)},${100 * Math.sin((angle * Math.PI) / 180)}: End point of the arc */}
           {/* Z: Close the path */}
-          {/* fill={colour}: Set the fill color of the segment */}
+          {/* className={colour}: Apply the CSS class to set the fill color */}
 
           <text
             x="50"
