@@ -1,68 +1,51 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
+.home-container { 
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.circle {
+  width: 275px;
+  height: 275px;
+  border: 5px solid black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px; /* Add margin-top to create space between the circle and the form */
+}
+
+.form {
+  display: flex;
+  flex-direction: row; /* Change to row to place input and button side by side */
+  align-items: center;
+  margin-bottom: 20px; /* Add margin-bottom to create space between the form and the circle */
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin-right: 10px; /* Add margin-right to create space between the input and the button */
+  font-size: 16px;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  padding: 10px 20px;
+  font-size: 16px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.submitted-label {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
 }
+
+.green1 { fill: rgb(162, 255, 0); }
+.green2 { fill: #a2ff00ba; }
+.green3 { fill: rgba(162, 255, 0, 0.476); }
+.green4 { fill: rgba(162, 255, 0, 0.23); }
+.green5 { fill: rgba(162, 255, 0, 0.08); }
+.green6 { fill: rgba(162, 255, 0, 0); }
+.green7 { fill: rgba(162, 255, 0, 0.476); }
