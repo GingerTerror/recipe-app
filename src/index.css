@@ -1,50 +1,104 @@
-.home-container { 
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 
-.circle {
-  width: 275px;
-  height: 275px;
-  border: 5px solid black;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px; /* Add margin-top to create space between the circle and the form */
+.home-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.form {
-  display: flex;
-  flex-direction: row; /* Change to row to place input and button side by side */
-  align-items: center;
-  margin-bottom: 20px; /* Add margin-bottom to create space between the form and the circle */
-}
-
-input[type="text"] {
-  padding: 10px;
-  margin-right: 10px; /* Add margin-right to create space between the input and the button */
-  font-size: 16px;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.submitted-label {
-  margin-top: 20px;
-  font-size: 18px;
+h1 {
   color: #333;
+  margin-bottom: 20px;
 }
 
-.green0 { fill: rgb(162, 255, 0); }
-.green1 { fill: rgb(133, 210, 0); }
-.green2 { fill: rgb(102, 161, 0); }
-.green3 { fill: #c9ff6b; }
-.green4 { fill: rgb(73, 115, 0); }
-.green5 { fill: rgb(73, 116, 0); }
+/* Form styles */
+.form {
+  margin-bottom: 20px;
+}
+
+.form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 200px;
+}
+
+.form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form button:hover {
+  background-color: #218838;
+}
+
+/* SVG styles */
+.circle {
+  margin: 20px auto;
+  display: block;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 2s;
+}
+
+.spin {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Label styles */
+.submitted-label {
+  display: block;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Button styles */
+button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.green0 { fill: #6B8E23; } /* Olive Drab */
+.green1 { fill: #556B2F; } /* Dark Olive Green */
+.green2 { fill: #8FBC8F; } /* Dark Sea Green */
+.green3 { fill: #3CB371; } /* Medium Sea Green */
+.green4 { fill: #2E8B57; } /* Sea Green */
+.green5 { fill: #66CDAA; } /* Medium Aquamarine */
