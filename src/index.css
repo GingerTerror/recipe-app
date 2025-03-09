@@ -42,9 +42,18 @@ button {
   color: #333;
 }
 
-.green0 { fill: rgb(162, 255, 0); }
-.green1 { fill: rgb(133, 210, 0); }
-.green2 { fill: rgb(102, 161, 0); }
-.green3 { fill: #c9ff6b; }
-.green4 { fill: rgb(73, 115, 0); }
-.green5 { fill: rgb(73, 116, 0); }
+.green0 { fill: #6B8E23; } /* Olive Drab */
+.green1 { fill: #556B2F; } /* Dark Olive Green */
+.green2 { fill: #8FBC8F; } /* Dark Sea Green */
+.green3 { fill: #3CB371; } /* Medium Sea Green */
+.green4 { fill: #2E8B57; } /* Sea Green */
+.green5 { fill: #66CDAA; } /* Medium Aquamarine */
+
+@keyframes spinAnimation {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spin {
+  animation: spinAnimation 2s linear;
+}
