@@ -1,0 +1,50 @@
+.home-container { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.circle {
+  width: 275px;
+  height: 275px;
+  border: 5px solid black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px; /* Add margin-top to create space between the circle and the form */
+}
+
+.form {
+  display: flex;
+  flex-direction: row; /* Change to row to place input and button side by side */
+  align-items: center;
+  margin-bottom: 20px; /* Add margin-bottom to create space between the form and the circle */
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin-right: 10px; /* Add margin-right to create space between the input and the button */
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submitted-label {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+.green0 { fill: rgb(162, 255, 0); }
+.green1 { fill: rgb(133, 210, 0); }
+.green2 { fill: rgb(102, 161, 0); }
+.green3 { fill: #c9ff6b; }
+.green4 { fill: rgb(73, 115, 0); }
+.green5 { fill: rgb(73, 116, 0); }
